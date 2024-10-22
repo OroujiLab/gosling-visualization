@@ -14,16 +14,16 @@
     <script>
         // Wait until the DOM and script are fully loaded
         document.addEventListener('DOMContentLoaded', function() {
-            // Define the Gosling spec for visualizing the bigWig file
+            // Define the Gosling spec for visualizing the public bigWig file
             const goslingSpec = {
                 "layout": "linear",  // Linear layout for a genomic track
                 "tracks": [
                     {
                         "alignment": "overlay",  // Required alignment property
                         "data": {
-                            "url": "http://localhost:8000/POP_170.bigwig",  // Access the file via the HTTP server
+                            "url": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/bbi/wgEncodeGencodeBasicV35.bb",  // Public bigWig file from UCSC
                             "type": "bigwig",  // Specify that it's a bigWig file
-                            "column": "value"  // Ensure the column for values is set
+                            "column": "value"  // Column for values (public files usually have this format)
                         },
                         "mark": "bar",  // Visualize the bigWig data as a bar chart
                         "x": {
